@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallowen</title>
+    <link rel="stylesheet" href="./css/Hallowen.css">
+    <link rel="shortcut icon" href="./img/bat.png" type="image/x-icon">
+    <script src="./js/halloween.js"></script>
+</head>
+<body>
+    <div id="scenario">
+    <img id="ghosts" src="./img/gggghhhhoooosssttt.gif" alt="" >
+    <div id="ghost" onmouseover="show('ghosts');sound('ghostsound')" onmouseout="hide('ghosts'); silence('ghostsound')">
+        <audio id="ghostsound" >
+            <source src="./sound/halloween-i-see-you.mp3" type="audio/mp3" >
+            </audio>
+
+    </div>
+    <img id="pumpkin" src="./img/888c2a5b2f0a7a22da8d82b56ca2828d.gif" alt="" >
+    <div id="calabaza" onmouseover="show('pumpkin');sound('scream')" onmouseout="hide('pumpkin');silence('scream')">
+    <audio id="scream" >
+    <source src="./sound/halloween-terror-scream.mp3" type="audio/mp3" >
+    </audio>
+
+    
+    </div>
+    <img id="skeletonn" src="./img/skkskksksksks.gif" alt="" >
+    <div id="house" onmouseover="show('skeletonn');sound('skeletonsound')" onmouseout="hide('skeletonn');silence('skeletonsound')">
+        <audio id="skeletonsound" >
+    <source src="./sound/hallowens-hallowen.mp3" type="audio/mp3" >
+    </audio>
+
+    
+    </div>
+    <p id = ghosttexto>
+        There is something at the ghost...
+    </p>
+    <p id = housetexto>
+        touch the house if you can
+    </p>
+    <p id = pumpkintexto>
+        what a pretty pumpkin
+    </p>
+
+</div>
+    
+
+</body>
+</html>

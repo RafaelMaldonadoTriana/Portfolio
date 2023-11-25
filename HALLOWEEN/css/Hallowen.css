@@ -1,0 +1,139 @@
+
+@font-face {
+       font-family: terror2;
+       src: url(../font/DOKTOR\ terror.ttf);
+       font-family: terror;
+       src: url(../font/terror_pro.ttf);
+}
+body { background-color: black;}
+#scenario {width: 1920px;
+       height: 1080px;
+       background-image: url(../img/2222.png);
+       margin: auto;
+       position:absolute;
+
+}
+
+#ghost {width:115px ;
+       height: 155px;
+       position: absolute;
+       top:470px;
+       left: 453px;
+       
+}
+#calabaza {
+       width:275px ;
+       height: 268px;
+       position: absolute;
+       top: 550px;
+       left: 1450px;
+       
+}
+#house {
+       width:175px ;
+       height: 350px; 
+       position: absolute;
+       top: 200px;
+       left: 1290px;
+       
+}
+#ghosts { position: absolute;
+       top: 400px;
+       left:300px ;
+       width: 175px;
+       height: 168px;
+       visibility: hidden;}
+#pumpkin { position: absolute;
+       top: 530px;
+       left:1253px ;
+       width: 175px;
+       height: 168px;
+       visibility: hidden;}
+#skeletonn { position: absolute;
+       top: 90px;
+       left:1030px ;
+       width: 175px;
+       height: 350px;
+       visibility: hidden;}
+
+#ghosttexto{    color: white;
+              font-size: 1.5em;
+              font-family: terror2;
+              position: absolute;
+              top: 400px;
+              left: 300px;
+              opacity: 0;
+              animation-name:showghosttexto ;
+              animation-duration: 6s;
+              animation-iteration-count: infinite;}
+#housetexto{
+       opacity: 0;
+       animation-name:showhousetexto;
+       animation-duration: 4s;
+       position: absolute;
+       animation-iteration-count: infinite;
+       writing-mode: vertical-rl;
+       left: 1200px;
+       font-size: 1.5em;
+       font-family: terror;
+}
+
+#pumpkintexto{    color: white;
+       font-size: 1.5em;
+       font-family: terror2;
+       position: absolute;
+       top: 400px;
+       left: 300px;
+       opacity: 0;
+       animation-name:showpumpkintexto;
+       animation-duration: 6s;
+       animation-iteration-count: infinite;
+}
+
+
+@keyframes showghosttexto {
+       from {opacity: 0;
+       color: white;
+       left: 0px;}
+       to {opacity: 1;
+              color: red ;
+              left: 300px;}
+       
+}
+@keyframes showhousetexto {
+       0%{color: aquamarine;}
+       25%{color: red;}
+       50%{color: green;}
+       100%{color: yellow;}
+       from {opacity: 0;
+              top: 100px;}
+              to {opacity: 1;
+                     color: red ;
+                     top: 150px;}
+       }
+
+@keyframes showpumpkintexto {
+       from {opacity: 0;
+       color: white;
+       left: 0px;}
+       to {opacity: 1;
+              color: red ;
+              top: 800px;
+              left: 1100px;}
+              
+       }
+
+#housetexto:hover{
+       font-size: 2.2em;
+
+       
+}
+#ghosttexto:hover{
+       font-size: 2.2em;
+
+       
+}
+
+#pumpkintexto:hover{
+       font-size: 2.2em;
+}
