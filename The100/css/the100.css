@@ -1,0 +1,490 @@
+/**********************************************/
+/*  Style sheet for The 100 web site     */
+/*  author: Rafael Maldonado                  */
+/*  version:: 1.0                             */
+/*  comments : project 2023-24          */
+/**********************************************/
+
+
+
+@font-face {    /* esto no es un selector , es un enlace */
+    font-family: blackmirror;
+    src: url(../font/FontsFree-Net-FontsFree-Net-Proxima-Nova-1.ttf);
+}
+
+
+@font-face {
+    font-family: textonormal;
+    src: url(../font/open-sans/OpenSans-Regular.ttf);
+}
+
+/*************************** Estilo general ******************/
+
+* {box-sizing: border-box;} /* con maquetación compleja SIEMPRE */
+
+
+body {margin: 0;padding: 0; 
+    background-image:url(../img/peprpaf.jpg);        /* para desactivar el espacio de separacion por defecto */
+    background-color: rgb(54, 156, 98);
+    font-family: 'Courier New', Courier, monospace;}
+
+#wrapper {background-color: white;
+            width: 100%;             /*  ancho fijado al 100%  MOBILE FIRST   */
+            margin: auto;}          /*   centrado automaticamente  */
+
+
+
+nav {background-color: white;}
+
+button {}
+
+button :hover {
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+/********* nav style (from w3schools) ****************/
+
+nav {position: sticky;
+    top:0;
+    z-index: 99;
+    opacity: 0.8;}
+
+.fa-arrow-circle-up {position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 2.5em !important;
+                    z-index: 99;}
+
+a .fa-arrow-circle-up {color: gray;}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;  /** no se subraye el vínculo **/
+    font-size: 1.2em;
+}
+
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+  /* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+
+
+
+
+
+/****************************  HERO SECTION **************************************/
+
+#hero {background-image: url(../img/the\ 100.jpg);
+                        height: 80vh;      /* el 100% del alto de la ventana del navegador */
+                        background-size: cover;
+                        background-position: center;
+                        position: relative;         /**** contenedor relativo ****/
+}
+
+
+#hero button {background-color: gray;
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 15px;
+                border:none;
+                border-radius: 10px;
+                position: absolute;         /**** contenido absoluto ****/
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);       /**** lo traslado a la mitad de su tamaño **/
+                
+
+}
+
+#hero button:hover {background-color: black
+                    color(#00000080);
+                border: 1px solid #80808080;}
+
+
+
+
+
+
+                /*********************** INTRO SECTION GRID-2 ****************************/
+
+.grid-2 {display: grid;
+        grid-template-columns: 100%;}  /****  MOBILE FIRST ****/
+
+.col-2 {padding: 4%;}
+
+#introimg {width: 80%;
+            display: block;
+            margin: auto;}
+
+/***************    seasons SECCTION ( GRID DE 4 ) ***************/
+
+#resume {background-color: white;}
+.grid-4 {display:grid;
+        grid-template-columns: 100%;} /****** MOBILE FIRST *****/
+
+
+
+
+        /*********** responsive *******/
+
+
+@media only screen and (width > 650px){ /******** TABLET *********/
+    #wrapper {width: 80%;}
+    .grid-4 {grid-template-columns: 50% 50%;}
+    
+}
+
+@media only screen and (width>900px){   /********** COMPUTER ***********/
+    .grid-2 {grid-template-columns: 50% 50%;}
+    .grid-3d {grid-template-columns: 25% 25% 50%;}
+    .grid-4 {grid-template-columns: auto auto auto auto;}
+}
+
+
+/****** responsive top nav  *****/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
+
+/************* division de la serie ***********/
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#divserie {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    padding: 5em 3em;
+}
+
+.accordion {
+    max-width: 80%;
+    text-align: left;
+}
+
+.divserie-hover {box-shadow: 3px 3px 3px black;}
+
+
+article {
+    border: 10px solid black;
+    padding: 1em;
+    margin: 5em auto;
+}
+
+article2 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+article3 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+article4 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+article5 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+article6 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+article7 {
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 5em auto;
+}
+
+input[type="radio"] {
+    appearance: none;
+    position: fixed;
+    top: -100vh; left: -100vh;
+
+    & ~ div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    }
+
+    &:checked ~ div {
+    max-height: 200px;
+    }
+}
+
+
+
+
+
+/************************* footer ******************/
+footer {background-color: black;
+color: white;}
+
+
+.grid-3d {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1%;
+}
+
+
+footer h3 {
+    margin: 20px 0;
+}
+
+footer .fa {  padding: 18px 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius:50%;
+    margin-right: 20px;
+}
+
+footer a {color: white;
+text-decoration: none;}
+
+
+/* redes sociales en el footer */
+footer .fa-facebook-official {background-color: #3B5998;}
+footer .fa-twitter {background-color: #55ACEE;}
+footer .fa-whatsapp {background-color: #25D366;}
+
+/********** créditos *********/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 10%;
+    top: 0;
+    width: 80%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: black;
+}
+
+  /* Modal Content/Box */
+.modal-content {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+
+
+footer  .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%;      
+
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+footer .responsive-iframe {
+    position: absolute;
+    top: 10%;       /***** se baja un 10% ( y queda otro 10% abajo )*******/
+    left: 10%;      /***** se mueve un 10% ( y queda otro 10% abajo )*******/
+    bottom: 0;
+    right: 0;
+    width: 80%;     /***** en vez de al 100%, deja libre un 20% ******/
+    height: 80%;    /******* de alto igual  *******/
+}
+
+
+footer a p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border: hidden;
+    padding-left: 10px;
+    transition: 1s;
+}
+
+footer a p:hover {
+    color: gray;
+    border-left: 3px solid white;
+
+}
+
+
+.col-4{padding: 4%;}
+
+.card{border: 1px solid gray;
+    background-image: url(../img/peprpaf.jpg);
+    background-color:darkviolet;
+    padding: 4%;
+    border-radius: 10px;}
+
+
+.card:hover {box-shadow: 3px 3px 3px #808080;}
+.card img{width: 100%;}
+
+.cardvideo {
+    border: 1px solid gray;
+    background-color:darkviolet;
+    padding: 4%;
+    border-radius: 10px;}
+
+
+/************** estilo del video dentro de la card **********/
+#resume .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+  /* Then style the iframe to fit in the container div with full height and width */
+#resume .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.h1 blockquote {
+    font-style: italic;
+    font-display:initial;
+}
+
+
+.clase {
+    color: white ;
+}
+
+.col-4 h3 {
+    color: black;
+}
+
+.col-4 p {
+    color: whitesmoke;
+}
+
+button {
+    text-decoration: underline;
+}
+
+
+#divserie .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+  /* Then style the iframe to fit in the container div with full height and width */
+#divserie .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#divserie h2 {
+    color: black;
+}
