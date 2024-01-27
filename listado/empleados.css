@@ -1,0 +1,77 @@
+/************** ****************/
+/************* estilo del listado ************/
+
+/******** estilo general *************/
+#container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/******** estilo de tabla ************/
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:first-child {
+    background-color: blueviolet;
+    color: white;
+}
+
+tr:hover {
+    background-color: rgb(219, 196, 250);
+}
+
+/********* estilo botones *********/
+.btn {
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-right: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.success {background-color: #04AA6D;}
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;}
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;}
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;}
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;}
+.default:hover {background: #ddd;}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+    table {
+        margin-top: 20px;
+    }
+}
