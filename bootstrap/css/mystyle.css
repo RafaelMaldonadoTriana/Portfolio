@@ -1,0 +1,37 @@
+/*********************************/
+
+
+
+
+
+/********************** fonts **********************/
+
+
+
+/********************** sizing ************************/
+
+
+.w-35 {width: 25%;}
+
+
+
+/******************** colors ****************/
+
+.bg-salmon {background-color: salmon;}
+
+.card:hover {box-shadow: 3px 3px 10px lightgray;}
+
+li {
+  color: black;
+  text-decoration: underline;
+  text-decoration: bold;
+}
+
+#h1 {
+  color: green;
+}
+/******************* hero ****************/
+
+#hero {background-image: url('../img/gfuhflfifv.jfif');
+        background-size: cover;
+        background-position: center;}

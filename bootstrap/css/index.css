@@ -1,0 +1,40 @@
+/***********************************************/
+
+/**************fonts***************/
+
+
+
+
+/**************************sizing******************/
+.w-35{
+    width: 35%;
+}
+.mb-8{margin-bottom: 8em;}
+
+
+/**********************colors **************************/
+.bg-salmon{
+    background-color: rgb(255, 158, 148);
+}
+.card:hover{
+    box-shadow: 3px 3px 10px lightgray;
+
+}
+
+li {
+    color: black;
+    text-decoration: underline;
+    text-shadow: 1em;
+    background-color: bisque;
+
+}
+
+p{
+    color: white;
+}
+/**************************hero*************************/
+#hero{
+    background-image: url(../img/aaa.jpg);
+    background-size: cover;
+    background-position: center;
+}
