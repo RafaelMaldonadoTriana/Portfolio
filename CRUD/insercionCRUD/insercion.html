@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserción de Datos</title>
+    <link rel="stylesheet" href="./css/insercion.css">
+    <link rel="shortcut icon" href="./img/insercion.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="insercion">
+            <h2>Inserción de Datos</h2>
+            <form id="formulario" onsubmit="return validarFormulario()">
+                <div class="inputBox">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="obligatorio">*</span>
+                    <span id="nombre-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                    <span class="obligatorio">*</span>
+                    <span id="apellido-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+                    <span class="obligatorio">*</span>
+                    <span id="edad-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="text" id="correo" name="correo" required>
+                    <span class="obligatorio">*</span>
+                    <span id="correo-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="departamento">Departamento:</label>
+                    <select id="departamento" name="departamento" required>
+                        <option value="" disabled selected>Elija una opción</option>
+                        <option value="1">Administración</option>
+                        <option value="2">Ventas</option>
+                    </select>
+                    <span class="obligatorio">*</span>
+                    <span id="departamento-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label>Género:</label>
+                    <input type="radio" id="genero1" name="genero" value="masculino" required>
+                    <label for="genero1">Masculino</label>
+                    <input type="radio" id="genero2" name="genero" value="femenino" required>
+                    <label for="genero2">Femenino</label>
+                    <span class="obligatorio">*</span>
+                    <span id="genero-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="checkbox" id="recibirInfo" name="recibirInfo">
+                    <label for="recibirInfo">Recibir Información</label>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="./js/validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación de Datos</title>
+    <link rel="stylesheet" href="./css/modificacion.css">
+    <link rel="shortcut icon" href="./" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="modificacion">
+            <h2>Modificación de Datos</h2>
+            <form id="formulario" onsubmit="return validarFormulario()">
+                <div class="inputBox">
+                    <label for="nombre">Nombre: <span>*</span></label>
+                    <input type="text" id="nombre" name="nombre" value="Juan Perez" required>
+                    <span class="obligatorio">*</span>
+                    <span id="nombre-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="apellido">Apellido: <span>*</span></label>
+                    <input type="text" id="apellido" name="apellido" value="Gomez" required>
+                    <span class="obligatorio">*</span>
+                    <span id="apellido-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="edad">Edad: <span>*</span></label>
+                    <input type="number" id="edad" name="edad" value="30" required>
+                    <span class="obligatorio">*</span>
+                    <span id="edad-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="correo">Correo Electrónico: <span>*</span></label>
+                    <input type="email" id="correo" name="correo" value="juanperez@example.com" required>
+                    <span class="obligatorio">*</span>
+                    <span id="correo-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label for="departamento">Departamento: <span>*</span></label>
+                    <select id="departamento" name="departamento" required>
+                        <option value="" disabled selected>Elige uno</option>
+                        <option value="1">Administración</option>
+                        <option value="2">Ventas</option>
+                    </select>
+                    <span class="obligatorio">*</span>
+                    <span id="departamento-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <label>Género:</label>
+                    <input type="radio" id="genero1" name="genero" value="masculino" required>
+                    <label for="genero1">Masculino</label>
+                    <input type="radio" id="genero2" name="genero" value="femenino" required>
+                    <label for="genero2">Femenino</label>
+                    <span class="obligatorio">*</span>
+                    <span id="genero-error" class="error"></span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="checkbox" id="recibirInfo" name="recibirInfo" checked>
+                    <label for="recibirInfo">Recibir Información</label>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Script para validar el formulario -->
+    <script src="./js/modificacion.js"></script>
+</body>
+</html>

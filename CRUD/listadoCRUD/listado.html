@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Datos</title>
+    <link rel="stylesheet" href="./css/listado.css">
+    <link rel="shortcut icon" href="./img/listado.png" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="listado">
+            <h2>Listado de Datos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Departamento</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaDatos">
+
+                    <tr>
+                        <td>José</td>
+                        <td>Ruiz</td>
+                        <td>Administración</td>
+                        <td>
+                            <button onclick="eliminarFila(this)">Eliminar</button>
+                            <button onclick="abrirModalEditar(this)">Editar</button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Ventana modal para editar datos -->
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalEditar()">&times;</span>
+            <h2>Editar Datos</h2>
+            <form id="formularioEditar" onsubmit="return guardarEdicion()">
+                <div class="inputBox">
+                    <label for="nombreEdit">Nuevo Nombre:</label>
+                    <input type="text" id="nombreEdit" name="nombreEdit">
+                </div>
+
+                <div class="inputBox">
+                    <label for="apellidoEdit">Nuevo Apellido:</label>
+                    <input type="text" id="apellidoEdit" name="apellidoEdit">
+                </div>
+
+                <div class="inputBox">
+                    <label for="departamentoEdit">Nuevo Departamento:</label>
+                    <select id="departamentoEdit" name="departamentoEdit">
+                        <option value="Administración">Administración</option>
+                        <option value="Ventas">Ventas</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="Guardar Cambios">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/listado.js"></script>
+</body>
+</html>
