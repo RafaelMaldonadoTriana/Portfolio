@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Triángulo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="trianguloForm" class="w-50 mx-auto border border-primary p-5" onsubmit="return determinarTipoTriangulo()">
+            <h1 class="text-center text-danger">Tipo de Triángulo</h1>
+            <div class="mb-3">
+                <label for="lado1" class="form-label">Lado 1</label>
+                <input type="number" class="form-control" id="lado1" required>
+            </div>
+            <div class="mb-3">
+                <label for="lado2" class="form-label">Lado 2</label>
+                <input type="number" class="form-control" id="lado2" required>
+            </div>
+            <div class="mb-3">
+                <label for="lado3" class="form-label">Lado 3</label>
+                <input type="number" class="form-control" id="lado3" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Determinar</button>
+            <div id="resultado" class="mt-5"></div>
+        </form>
+        
+    </div>
+
+    <script src="ejercicio3.js"></script>
+</body>
+</html>

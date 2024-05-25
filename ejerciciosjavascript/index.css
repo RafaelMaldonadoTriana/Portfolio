@@ -1,0 +1,38 @@
+/* styles.css */
+
+body {
+    background-color: #202124; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+}
+
+.card {
+    background-color: #2d2d2d; /* Fondo oscuro para tarjetas */
+    border: 1px solid #373737; /* Borde de las tarjetas */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+}
+
+.card-header {
+    background-color: #373737; /* Encabezado oscuro para tarjetas */
+    border-bottom: 1px solid #2d2d2d; /* Borde inferior */
+    border-radius: 10px 10px 0 0; /* Borde redondeado solo arriba */
+}
+
+.card-title {
+    color: #ffffff; /* Texto claro */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Botones de color primario oscuro */
+    border-color: #007bff; /* Borde de botones de color primario oscuro */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón sobre botones de color primario oscuro */
+    border-color: #0056b3; /* Cambio de color del borde al pasar el ratón sobre botones de color primario oscuro */
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5); /* Efecto de enfoque en botones de color primario oscuro */
+}
+
